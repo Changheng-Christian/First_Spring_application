@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--所谓的”控制反转“就是”控制权由原本的对象本身转移到了Spring的配置文件中“
+            高度解耦，控制反转。
+    -->
+
+    <bean id="helloWorld" class="com.demo.HelloWorld"></bean>
+    <bean id="helloChina" class="com.demo.HelloChina"></bean>
+    <bean id="person" class="com.demo.Person">
+        <property name="helloMessage" ref="helloWorld"></property>
+    </bean>
+
+</beans>
