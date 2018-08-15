@@ -15,7 +15,7 @@ public class Email implements ApplicationListener<EmailEvent> {
 
     @Override
     public void onApplicationEvent(EmailEvent emailEvent) {
-        System.out.println("监听到："+emailEvent.getSource());
+        System.out.println("请验证你的邮箱："+emailEvent.getSource());
     }
 }
 

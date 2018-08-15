@@ -22,14 +22,17 @@ public class Main {
     ApplicationContext applicationContext = new ClassPathXmlApplicationContext("login/login.xml");
 
     //获取publisher实例。。  getBean获取到的是对象，子类引用指向父类对象，需要向下强转
-    LoginEventPubliser loginEventPubliser = (LoginEventPubliser) applicationContext.getBean("Publiser");
+    ResgistEventPubliser resgistEventPubliser = (ResgistEventPubliser) applicationContext.getBean("Publiser");
 
     //使用pblisher实例调用Pblisher里面的方法，将主方法的参数设置进去
-    loginEventPubliser.setPhone(phone);
-    loginEventPubliser.setEmail(email);
+    resgistEventPubliser.setPhone(phone);
+    resgistEventPubliser.setEmail(email);
 
+    System.out.println("发布成功。");
     //发布
-    loginEventPubliser.publish();
+    resgistEventPubliser.publish();
+
+
 
     }
 

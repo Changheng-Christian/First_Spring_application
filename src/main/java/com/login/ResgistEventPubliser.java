@@ -14,7 +14,7 @@ import java.util.Scanner;
  * @create: 2018-08-15 22:20
  **/
 @Component ("Publiser")
-public class LoginEventPubliser implements ApplicationEventPublisherAware {
+public class ResgistEventPubliser implements ApplicationEventPublisherAware {
     private String phone = null;
     private String email = null;
 

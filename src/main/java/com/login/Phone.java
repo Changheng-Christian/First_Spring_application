@@ -17,7 +17,7 @@ public class Phone implements ApplicationListener<PhoneEvent> {
 
     @Override
     public void onApplicationEvent(PhoneEvent phoneEvent) {
-        System.out.println("验证手机为："+phoneEvent.getSource());
+        System.out.println("请验证你的手机号码："+phoneEvent.getSource());
 
     }
 }
